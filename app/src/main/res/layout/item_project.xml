@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="4dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="6dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,10 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/card_view_project_icon_container"
             android:layout_toEndOf="@+id/card_view_project_icon_container"
-            android:text="The App title"
             android:fontFamily="sans-serif-medium"
+            android:text="The App title"
             android:textColor="#222222"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/text_view_project_description"
@@ -47,10 +46,10 @@
             android:layout_below="@id/text_view_project_title"
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/card_view_project_icon_container"
-            android:text="This will be our description"
             android:fontFamily="sans-serif-light"
-            android:textSize="14sp"
-            android:textColor="#888888"/>
+            android:text="This will be our description"
+            android:textColor="#888888"
+            android:textSize="14sp" />
 
 
     </RelativeLayout>
