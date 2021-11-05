@@ -1,6 +1,7 @@
 package com.example.leoandroidportfolio;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -8,9 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView titleText;
-    TextView descriptionText;
-    ImageView imageView;
+    RecyclerView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +23,18 @@ public class MainActivity extends AppCompatActivity {
                 new Project("Calculation App","From Inches to Meters.", R.drawable.einstein),
                 new Project("Francesinhas","A menu app for Francesinhas", R.drawable.francesinha),
                 new Project("I Buy It","Online Market", R.drawable.market_online)
-
         };
+
+        ProjectsAdapter adapter = new ProjectsAdapter(projects);
+
+        list.setAdapter(adapter);
+
+
     }
 
     private void findViews() {
-        titleText = findViewById(R.id.text_view_project_title);
-        descriptionText = findViewById(R.id.text_view_project_description);
-        imageView = findViewById(R.id.image_view_project_icon);
+
+        list = findViewById(R.id.recycler_view_projects);
 
     }
 }
